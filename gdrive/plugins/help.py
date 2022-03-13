@@ -43,7 +43,7 @@ def map(pos):
         return [
             [
              InlineKeyboardButton(text = 'Support Chat', url = SUPPORT_CHAT_LINK),
-             InlineKeyboardButton(text = 'Channel Update', url = "t.me/IDNCoder")
+             InlineKeyboardButton(text = 'Channel Update', url = "t.me/@madhavanmi")
             ],
             [InlineKeyboardButton(text = '<--', callback_data = f"help+{pos-1}")]
 
