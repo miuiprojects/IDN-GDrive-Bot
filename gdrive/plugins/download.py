@@ -17,7 +17,7 @@ def _download(client, message):
   if message.media:
     return
   user_id = message.from_user.id
-  sent_message = message.reply_text('🕵️**Checking link...**', quote=True)
+  sent_message = message.reply_text('🧬**Checking link...**', quote=True)
   link = message.command[1] if message.command else message.text
   if 'drive.google.com' in link:
     sent_message.edit(Messages.CLONING.format(link))
@@ -50,7 +50,7 @@ def _download(client, message):
 @Client.on_message(filters.private & filters.incoming & (filters.document | filters.audio | filters.video | filters.photo) & CustomFilters.auth_users)
 def _telegram_file(client, message):
   user_id = message.from_user.id
-  sent_message = message.reply_text('🕵️**Checking File...**', quote=True)
+  sent_message = message.reply_text('🧬**Checking File...**', quote=True)
   if message.document:
     file = message.document
   elif message.video:
@@ -77,7 +77,7 @@ def _telegram_file(client, message):
 def _ytdl(client, message):
   user_id = message.from_user.id
   if len(message.command) > 1:
-    sent_message = message.reply_text('🕵️**Checking Link...**', quote=True)
+    sent_message = message.reply_text('🧬**Checking Link...**', quote=True)
     link = message.command[1]
     LOGGER.info(f'YTDL:{user_id}: {link}')
     sent_message.edit(Messages.DOWNLOADING.format(link))
