@@ -12,7 +12,7 @@ def _set_parent(client, message):
   if len(message.command) > 1:
     link = message.command[1]
     if 'clear' not in link:
-      sent_message = message.reply_text('🕵️**Checking Link...**', quote=True)
+      sent_message = message.reply_text('🧬**Checking Link...**', quote=True)
       gdrive = GoogleDrive(user_id)
       try:
         result, file_id = gdrive.checkFolderLink(link)
